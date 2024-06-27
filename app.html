@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module app</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>app</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Ccallu%5Cgit%5Cproject%5Capp.py">c:\users\callu\git\project\app.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="datetime.html">datetime</a><br>
+</td><td width="25%" valign=top><a href="database.html">database</a><br>
+</td><td width="25%" valign=top><a href="pydoc.html">pydoc</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="app.html#DatabaseConfig">DatabaseConfig</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="DatabaseConfig">class <strong>DatabaseConfig</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#Secret&nbsp;key&nbsp;given&nbsp;to&nbsp;prevent&nbsp;error<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-aboutUs"><strong>aboutUs</strong></a>()</dt><dd><tt>Displays&nbsp;a&nbsp;small&nbsp;story&nbsp;on&nbsp;the&nbsp;history&nbsp;of&nbsp;the&nbsp;restaurant&nbsp;<br>
+&nbsp;<br>
+Parameters:&nbsp;None<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;rendered&nbsp;HTML&nbsp;template&nbsp;of&nbsp;the&nbsp;aboutUs&nbsp;HTML&nbsp;page</tt></dd></dl>
+ <dl><dt><a name="-addTable"><strong>addTable</strong></a>(table_number)</dt><dd><tt>Add&nbsp;table&nbsp;to&nbsp;database.<br>
+&nbsp;<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;table_number&nbsp;(int):&nbsp;The&nbsp;number&nbsp;to&nbsp;create&nbsp;a&nbsp;table&nbsp;in&nbsp;database.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Error:&nbsp;If&nbsp;the&nbsp;table&nbsp;number&nbsp;already&nbsp;existed.</tt></dd></dl>
+ <dl><dt><a name="-add_staff"><strong>add_staff</strong></a>()</dt><dd><tt>Adds&nbsp;a&nbsp;new&nbsp;staff&nbsp;member&nbsp;to&nbsp;the&nbsp;StaffLogin&nbsp;table&nbsp;in&nbsp;the&nbsp;database.<br>
+&nbsp;<br>
+Sends&nbsp;a&nbsp;POST&nbsp;request&nbsp;to&nbsp;the&nbsp;'/add_staff'&nbsp;route&nbsp;to&nbsp;creates&nbsp;a&nbsp;new&nbsp;row&nbsp;in&nbsp;the&nbsp;StaffLogin&nbsp;table&nbsp;with&nbsp;the&nbsp;provided<br>
+information&nbsp;then&nbsp;redirect&nbsp;the&nbsp;user&nbsp;to&nbsp;the&nbsp;admin&nbsp;page.<br>
+&nbsp;<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Redirection:&nbsp;Redirects&nbsp;to&nbsp;the&nbsp;admin&nbsp;page.</tt></dd></dl>
+ <dl><dt><a name="-admin"><strong>admin</strong></a>()</dt><dd><tt>Displays&nbsp;two&nbsp;tables&nbsp;which&nbsp;shows&nbsp;a&nbsp;list&nbsp;of&nbsp;staff&nbsp;members&nbsp;and&nbsp;order&nbsp;payment&nbsp;history.<br>
+&nbsp;<br>
+Parameters:&nbsp;None<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;rendered&nbsp;HTML&nbsp;template&nbsp;with&nbsp;context&nbsp;variables&nbsp;`staff_list`,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;`payment_info`.</tt></dd></dl>
+ <dl><dt><a name="-checkout"><strong>checkout</strong></a>(table_number)</dt><dd><tt>Creates&nbsp;a&nbsp;new&nbsp;order&nbsp;with&nbsp;the&nbsp;table&nbsp;number&nbsp;and&nbsp;total&nbsp;price,&nbsp;and&nbsp;adds&nbsp;the&nbsp;order&nbsp;items&nbsp;to&nbsp;the&nbsp;database.<br>
+Populates&nbsp;the&nbsp;Orders&nbsp;table&nbsp;and&nbsp;Items&nbsp;table&nbsp;in&nbsp;the&nbsp;database&nbsp;with&nbsp;the&nbsp;customers&nbsp;order.<br>
+&nbsp;<br>
+Parameters:<br>
+table_number&nbsp;(int):&nbsp;The&nbsp;number&nbsp;of&nbsp;the&nbsp;table&nbsp;the&nbsp;order&nbsp;was&nbsp;placed&nbsp;on.<br>
+&nbsp;<br>
+Returns:<br>
+None<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None.</tt></dd></dl>
+ <dl><dt><a name="-checkpay"><strong>checkpay</strong></a>(table_number)</dt><dd><tt>Handles&nbsp;a&nbsp;payment&nbsp;for&nbsp;a&nbsp;table.<br>
+&nbsp;<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;table_number&nbsp;(int):&nbsp;The&nbsp;ID&nbsp;number&nbsp;of&nbsp;the&nbsp;table&nbsp;being&nbsp;paid&nbsp;for.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Tuple[bool,&nbsp;str]:&nbsp;A&nbsp;tuple&nbsp;containing&nbsp;a&nbsp;boolean&nbsp;indicating&nbsp;whether&nbsp;the&nbsp;payment&nbsp;was&nbsp;successful&nbsp;or&nbsp;not,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;a&nbsp;string&nbsp;message&nbsp;indicating&nbsp;the&nbsp;result&nbsp;of&nbsp;the&nbsp;payment&nbsp;attempt.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Error:&nbsp;If&nbsp;the&nbsp;input&nbsp;card&nbsp;number&nbsp;is&nbsp;longer&nbsp;than&nbsp;16&nbsp;digits.</tt></dd></dl>
+ <dl><dt><a name="-complete_order"><strong>complete_order</strong></a>(order_id)</dt><dd><tt>Handles&nbsp;HTTP&nbsp;GET&nbsp;and&nbsp;POST&nbsp;requests&nbsp;for&nbsp;the&nbsp;`/complete_order/&lt;order_id&gt;`&nbsp;route.<br>
+&nbsp;<br>
+Fetches&nbsp;an&nbsp;order&nbsp;from&nbsp;the&nbsp;database&nbsp;using&nbsp;`order_id`,&nbsp;deletes&nbsp;the&nbsp;order&nbsp;and&nbsp;its<br>
+corresponding&nbsp;items&nbsp;from&nbsp;the&nbsp;`Orders`&nbsp;and&nbsp;`Items`&nbsp;tables.&nbsp;If&nbsp;the&nbsp;order&nbsp;is&nbsp;cooked,<br>
+sets&nbsp;the&nbsp;`delivered`&nbsp;flag&nbsp;of&nbsp;the&nbsp;order&nbsp;to&nbsp;`True`,&nbsp;and&nbsp;commits&nbsp;the&nbsp;changes&nbsp;to&nbsp;the<br>
+database.&nbsp;If&nbsp;the&nbsp;order&nbsp;is&nbsp;not&nbsp;cooked,&nbsp;it&nbsp;only&nbsp;deletes&nbsp;the&nbsp;order&nbsp;and&nbsp;its&nbsp;corresponding<br>
+items&nbsp;from&nbsp;the&nbsp;database.It&nbsp;then&nbsp;redirects&nbsp;to&nbsp;the&nbsp;`<a href="#-waiter">waiter</a>()`&nbsp;function&nbsp;which<br>
+renders&nbsp;the&nbsp;`waiter.html`&nbsp;template.<br>
+&nbsp;<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;order_id&nbsp;(int):&nbsp;The&nbsp;ID&nbsp;of&nbsp;the&nbsp;order&nbsp;to&nbsp;be&nbsp;completed.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;redirection&nbsp;to&nbsp;the&nbsp;`<a href="#-waiter">waiter</a>()`&nbsp;function.</tt></dd></dl>
+ <dl><dt><a name="-confirm_order"><strong>confirm_order</strong></a>(order_id)</dt><dd><tt>Uses&nbsp;the&nbsp;ID&nbsp;of&nbsp;an&nbsp;order&nbsp;to&nbsp;mark&nbsp;that&nbsp;order&nbsp;as&nbsp;confirmed.<br>
+&nbsp;<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;order_id&nbsp;(int):&nbsp;the&nbsp;item&nbsp;ID&nbsp;of&nbsp;the&nbsp;order&nbsp;being&nbsp;confirmed.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;redirects&nbsp;back&nbsp;to&nbsp;the&nbsp;waiter&nbsp;page,&nbsp;refreshing&nbsp;the&nbsp;page.</tt></dd></dl>
+ <dl><dt><a name="-customer"><strong>customer</strong></a>(table_number)</dt><dd><tt>This&nbsp;function&nbsp;handles&nbsp;the&nbsp;GET&nbsp;and&nbsp;POST&nbsp;requests&nbsp;for&nbsp;the&nbsp;customer&nbsp;page.<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;order&nbsp;items&nbsp;session&nbsp;varible&nbsp;dosent&nbsp;exist,&nbsp;the&nbsp;function&nbsp;initializes<br>
+it&nbsp;along&nbsp;with&nbsp;the&nbsp;total&nbsp;price&nbsp;set&nbsp;to&nbsp;0.&nbsp;The&nbsp;function&nbsp;fetches&nbsp;the&nbsp;menu&nbsp;items&nbsp;from<br>
+the&nbsp;database&nbsp;and&nbsp;checks&nbsp;which&nbsp;form&nbsp;button&nbsp;was&nbsp;pressed.&nbsp;If&nbsp;the&nbsp;submit&nbsp;button<br>
+was&nbsp;pressed,&nbsp;the&nbsp;function&nbsp;checks&nbsp;out&nbsp;the&nbsp;customer.&nbsp;If&nbsp;the&nbsp;needhelp&nbsp;button&nbsp;was<br>
+pressed,&nbsp;the&nbsp;function&nbsp;notifies&nbsp;the&nbsp;staff.&nbsp;If&nbsp;the&nbsp;checkout&nbsp;button&nbsp;was&nbsp;pressed,<br>
+the&nbsp;function&nbsp;checks&nbsp;whether&nbsp;the&nbsp;payment&nbsp;was&nbsp;made&nbsp;and&nbsp;returns&nbsp;the&nbsp;appropriate<br>
+message.&nbsp;Otherwise,&nbsp;the&nbsp;function&nbsp;adds&nbsp;a&nbsp;new&nbsp;item&nbsp;to&nbsp;the&nbsp;order,&nbsp;updates&nbsp;the<br>
+order&nbsp;items&nbsp;and&nbsp;total&nbsp;price,&nbsp;and&nbsp;renders&nbsp;the&nbsp;customer&nbsp;menu&nbsp;template&nbsp;with&nbsp;the<br>
+table&nbsp;number,&nbsp;order&nbsp;items,&nbsp;total&nbsp;price,&nbsp;and&nbsp;menu&nbsp;items.<br>
+&nbsp;<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;table_number:&nbsp;A&nbsp;string&nbsp;representing&nbsp;the&nbsp;table&nbsp;number.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;Flask&nbsp;HTTP&nbsp;response&nbsp;<a href="builtins.html#object">object</a>&nbsp;that&nbsp;renders&nbsp;the&nbsp;customer&nbsp;menu&nbsp;template.</tt></dd></dl>
+ <dl><dt><a name="-delete_item"><strong>delete_item</strong></a>(table_number, item, qty)</dt><dd><tt>Remove&nbsp;an&nbsp;item&nbsp;from&nbsp;the&nbsp;customer's&nbsp;order&nbsp;list&nbsp;and&nbsp;update&nbsp;the&nbsp;session&nbsp;variable&nbsp;and&nbsp;the&nbsp;current&nbsp;order&nbsp;price.<br>
+&nbsp;<br>
+Parameters:<br>
+table_number&nbsp;(int):&nbsp;The&nbsp;table&nbsp;number&nbsp;for&nbsp;the&nbsp;customer's&nbsp;table.<br>
+item&nbsp;(str):&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;item&nbsp;to&nbsp;be&nbsp;removed&nbsp;from&nbsp;the&nbsp;order&nbsp;list.<br>
+qty&nbsp;(int):&nbsp;The&nbsp;quantity&nbsp;of&nbsp;the&nbsp;item&nbsp;to&nbsp;be&nbsp;removed&nbsp;from&nbsp;the&nbsp;order&nbsp;list,&nbsp;either&nbsp;1&nbsp;or&nbsp;count&nbsp;of&nbsp;that&nbsp;item.<br>
+&nbsp;<br>
+Returns:<br>
+redirect:&nbsp;A&nbsp;redirect&nbsp;to&nbsp;the&nbsp;customer&nbsp;page.</tt></dd></dl>
+ <dl><dt><a name="-delete_staff"><strong>delete_staff</strong></a>(staff_id)</dt><dd><tt>Deletes&nbsp;staff&nbsp;from&nbsp;database&nbsp;when&nbsp;delete&nbsp;button&nbsp;is&nbsp;pressed&nbsp;by&nbsp;the&nbsp;user.<br>
+&nbsp;<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;staff_id&nbsp;(int):&nbsp;The&nbsp;ID&nbsp;of&nbsp;the&nbsp;staff&nbsp;which&nbsp;is&nbsp;to&nbsp;be&nbsp;deleted&nbsp;from&nbsp;database.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Redirects&nbsp;to&nbsp;admin&nbsp;page&nbsp;to&nbsp;show&nbsp;updated&nbsp;table&nbsp;after&nbsp;removal&nbsp;of&nbsp;staff.</tt></dd></dl>
+ <dl><dt><a name="-fetch_item_id"><strong>fetch_item_id</strong></a>(menu_item)</dt><dd><tt>Fetches&nbsp;the&nbsp;id&nbsp;of&nbsp;a&nbsp;given&nbsp;menu&nbsp;item&nbsp;from&nbsp;the&nbsp;database.<br>
+&nbsp;<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;menu_item&nbsp;(str):&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;menu&nbsp;item&nbsp;to&nbsp;fetch&nbsp;the&nbsp;id&nbsp;for.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int:&nbsp;The&nbsp;id&nbsp;of&nbsp;the&nbsp;menu&nbsp;item.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None.</tt></dd></dl>
+ <dl><dt><a name="-fetch_price"><strong>fetch_price</strong></a>(menu_item)</dt><dd><tt>Fetches&nbsp;the&nbsp;price&nbsp;of&nbsp;a&nbsp;given&nbsp;menu&nbsp;item&nbsp;from&nbsp;the&nbsp;database.<br>
+&nbsp;<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;menu_item&nbsp;(str):&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;menu&nbsp;item&nbsp;to&nbsp;fetch&nbsp;the&nbsp;price&nbsp;for.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;float:&nbsp;The&nbsp;price&nbsp;of&nbsp;the&nbsp;menu&nbsp;item.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None.</tt></dd></dl>
+ <dl><dt><a name="-freezeItem"><strong>freezeItem</strong></a>(item_id)</dt><dd><tt>Updates&nbsp;the&nbsp;database&nbsp;to&nbsp;show&nbsp;that&nbsp;the&nbsp;item&nbsp;with&nbsp;the&nbsp;id&nbsp;passed&nbsp;in&nbsp;is&nbsp;temporarily&nbsp;unavailable.&nbsp;<br>
+&nbsp;<br>
+Parameters:&nbsp;item_id&nbsp;holds&nbsp;the&nbsp;id&nbsp;of&nbsp;the&nbsp;item&nbsp;that&nbsp;is&nbsp;to&nbsp;be&nbsp;fetched&nbsp;from&nbsp;the&nbsp;database&nbsp;and&nbsp;be&nbsp;updated<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Redirects&nbsp;back&nbsp;to&nbsp;the&nbsp;modify&nbsp;menu&nbsp;page</tt></dd></dl>
+ <dl><dt><a name="-help"><strong>help</strong></a>()</dt><dd><tt>Displays&nbsp;a&nbsp;series&nbsp;of&nbsp;FAQs&nbsp;to&nbsp;help&nbsp;the&nbsp;customer&nbsp;<br>
+&nbsp;<br>
+Parameters:&nbsp;None<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;rendered&nbsp;HTML&nbsp;template&nbsp;of&nbsp;the&nbsp;help&nbsp;HTML&nbsp;page</tt></dd></dl>
+ <dl><dt><a name="-home"><strong>home</strong></a>()</dt><dd><tt>This&nbsp;function&nbsp;handles&nbsp;the&nbsp;GET&nbsp;and&nbsp;POST&nbsp;requests&nbsp;for&nbsp;the&nbsp;home&nbsp;page.<br>
+&nbsp;<br>
+When&nbsp;a&nbsp;user&nbsp;first&nbsp;arrives&nbsp;at&nbsp;the&nbsp;home&nbsp;page,&nbsp;their&nbsp;session&nbsp;data&nbsp;is&nbsp;cleared.<br>
+If&nbsp;the&nbsp;request&nbsp;method&nbsp;is&nbsp;POST,&nbsp;the&nbsp;function&nbsp;retrieves&nbsp;the&nbsp;table&nbsp;number&nbsp;input<br>
+from&nbsp;the&nbsp;form&nbsp;data,&nbsp;checks&nbsp;if&nbsp;it&nbsp;is&nbsp;a&nbsp;valid&nbsp;integer,&nbsp;adds&nbsp;the&nbsp;table&nbsp;to&nbsp;the<br>
+database&nbsp;if&nbsp;it&nbsp;does&nbsp;not&nbsp;exist,&nbsp;using&nbsp;the&nbsp;<a href="#-addTable">addTable</a>()&nbsp;method,&nbsp;and&nbsp;redirects&nbsp;<br>
+to&nbsp;the&nbsp;customer&nbsp;page&nbsp;with&nbsp;the&nbsp;table&nbsp;number&nbsp;as&nbsp;a&nbsp;parameter.&nbsp;If&nbsp;the&nbsp;input&nbsp;is<br>
+not&nbsp;a&nbsp;valid&nbsp;integer,&nbsp;an&nbsp;error&nbsp;message&nbsp;is&nbsp;set.&nbsp;Finally,&nbsp;the&nbsp;function&nbsp;renders<br>
+the&nbsp;home&nbsp;template&nbsp;with&nbsp;the&nbsp;error&nbsp;message&nbsp;(if&nbsp;any).<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;Flask&nbsp;HTTP&nbsp;response&nbsp;<a href="builtins.html#object">object</a>&nbsp;that&nbsp;renders&nbsp;the&nbsp;home&nbsp;template.</tt></dd></dl>
+ <dl><dt><a name="-kitchen"><strong>kitchen</strong></a>()</dt><dd><tt>Retrieves&nbsp;all&nbsp;orders&nbsp;from&nbsp;the&nbsp;database&nbsp;that&nbsp;are&nbsp;not&nbsp;delivered,&nbsp;confirmed,&nbsp;and&nbsp;not&nbsp;cooked,<br>
+and&nbsp;orders&nbsp;them&nbsp;in&nbsp;ascending&nbsp;order&nbsp;by&nbsp;the&nbsp;time&nbsp;of&nbsp;order.&nbsp;It&nbsp;also&nbsp;retrieves&nbsp;all&nbsp;menu&nbsp;items,<br>
+their&nbsp;names,&nbsp;IDs,&nbsp;quantities,&nbsp;and&nbsp;readiness&nbsp;status&nbsp;from&nbsp;the&nbsp;database,&nbsp;and&nbsp;renders&nbsp;the&nbsp;<br>
+kitchen.html&nbsp;template&nbsp;with&nbsp;the&nbsp;retrieved&nbsp;orders&nbsp;and&nbsp;items.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;rendered&nbsp;HTML&nbsp;template&nbsp;that&nbsp;displays&nbsp;the&nbsp;orders&nbsp;and&nbsp;items&nbsp;in&nbsp;the&nbsp;kitchen&nbsp;webpage.</tt></dd></dl>
+ <dl><dt><a name="-mark_as_not_ready"><strong>mark_as_not_ready</strong></a>()</dt><dd><tt>Mark&nbsp;an&nbsp;item&nbsp;as&nbsp;not&nbsp;ready&nbsp;in&nbsp;the&nbsp;database.<br>
+&nbsp;<br>
+Returns:<br>
+str:&nbsp;A&nbsp;message&nbsp;indicating&nbsp;whether&nbsp;the&nbsp;item&nbsp;was&nbsp;successfully&nbsp;marked&nbsp;as&nbsp;not&nbsp;ready&nbsp;or&nbsp;not&nbsp;found&nbsp;in&nbsp;the&nbsp;database.</tt></dd></dl>
+ <dl><dt><a name="-mark_as_ready"><strong>mark_as_ready</strong></a>()</dt><dd><tt>Marks&nbsp;an&nbsp;item&nbsp;as&nbsp;ready&nbsp;for&nbsp;a&nbsp;given&nbsp;order.&nbsp;Updates&nbsp;the&nbsp;'ready'&nbsp;status&nbsp;of&nbsp;the&nbsp;item&nbsp;in&nbsp;the&nbsp;database&nbsp;and&nbsp;<br>
+checks&nbsp;if&nbsp;all&nbsp;items&nbsp;in&nbsp;the&nbsp;order&nbsp;are&nbsp;ready.&nbsp;If&nbsp;all&nbsp;items&nbsp;in&nbsp;the&nbsp;order&nbsp;are&nbsp;ready,&nbsp;the&nbsp;'cooked'&nbsp;status&nbsp;of&nbsp;<br>
+the&nbsp;order&nbsp;is&nbsp;updated&nbsp;to&nbsp;'True'&nbsp;in&nbsp;the&nbsp;database.<br>
+&nbsp;<br>
+Parameters:<br>
+None<br>
+&nbsp;<br>
+Returns:<br>
+A&nbsp;JSON&nbsp;<a href="builtins.html#object">object</a>&nbsp;with&nbsp;the&nbsp;following&nbsp;keys:<br>
+-&nbsp;'message':&nbsp;a&nbsp;string&nbsp;indicating&nbsp;the&nbsp;status&nbsp;of&nbsp;the&nbsp;operation.&nbsp;Possible&nbsp;values&nbsp;are:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;'Item&nbsp;marked&nbsp;as&nbsp;ready':&nbsp;if&nbsp;the&nbsp;item&nbsp;was&nbsp;successfully&nbsp;marked&nbsp;as&nbsp;ready.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;'Order&nbsp;complete,&nbsp;sent&nbsp;to&nbsp;waiters':&nbsp;if&nbsp;all&nbsp;items&nbsp;in&nbsp;the&nbsp;order&nbsp;are&nbsp;ready&nbsp;and&nbsp;the&nbsp;'cooked'&nbsp;status&nbsp;of&nbsp;the&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;order&nbsp;was&nbsp;successfully&nbsp;updated&nbsp;to&nbsp;'True'.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;'Item&nbsp;not&nbsp;found':&nbsp;if&nbsp;the&nbsp;item&nbsp;with&nbsp;the&nbsp;given&nbsp;'item_id'&nbsp;was&nbsp;not&nbsp;found&nbsp;in&nbsp;the&nbsp;database.</tt></dd></dl>
+ <dl><dt><a name="-menu"><strong>menu</strong></a>()</dt><dd><tt>Displays&nbsp;a&nbsp;table&nbsp;showing&nbsp;each&nbsp;item&nbsp;in&nbsp;the&nbsp;menu&nbsp;table&nbsp;along&nbsp;with&nbsp;an&nbsp;image&nbsp;for&nbsp;each,&nbsp;items&nbsp;cannot&nbsp;be&nbsp;ordered&nbsp;from&nbsp;this&nbsp;page.<br>
+&nbsp;<br>
+Parameters:&nbsp;None<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;rendered&nbsp;HTML&nbsp;template&nbsp;with&nbsp;context&nbsp;variables&nbsp;'menu&nbsp;items'&nbsp;which&nbsp;is&nbsp;to&nbsp;be&nbsp;displayed&nbsp;on&nbsp;the&nbsp;page</tt></dd></dl>
+ <dl><dt><a name="-modify"><strong>modify</strong></a>()</dt><dd><tt>Updates&nbsp;the&nbsp;database&nbsp;with&nbsp;the&nbsp;new&nbsp;value<br>
+&nbsp;<br>
+Parameters:&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;item_id&nbsp;holds&nbsp;the&nbsp;id&nbsp;of&nbsp;the&nbsp;item&nbsp;that&nbsp;is&nbsp;to&nbsp;be&nbsp;fetched&nbsp;from&nbsp;the&nbsp;database&nbsp;and&nbsp;be&nbsp;updated<br>
+&nbsp;&nbsp;&nbsp;&nbsp;part&nbsp;holds&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;column&nbsp;that&nbsp;will&nbsp;be&nbsp;updates&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;newVal&nbsp;holds&nbsp;the&nbsp;user&nbsp;input&nbsp;that&nbsp;will&nbsp;replace&nbsp;the&nbsp;value&nbsp;currently&nbsp;in&nbsp;the&nbsp;database&nbsp;<br>
+&nbsp;<br>
+Returns:&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Redirects&nbsp;back&nbsp;to&nbsp;the&nbsp;modify&nbsp;menu&nbsp;page</tt></dd></dl>
+ <dl><dt><a name="-modify_menu"><strong>modify_menu</strong></a>()</dt><dd><tt>Displays&nbsp;a&nbsp;table&nbsp;showing&nbsp;each&nbsp;item&nbsp;in&nbsp;the&nbsp;menu&nbsp;table&nbsp;that&nbsp;can&nbsp;be&nbsp;modified.<br>
+&nbsp;<br>
+Parameters:&nbsp;None<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;rendered&nbsp;HTML&nbsp;template&nbsp;with&nbsp;context&nbsp;variables&nbsp;'menu&nbsp;items'&nbsp;which&nbsp;is&nbsp;to&nbsp;be&nbsp;displayed&nbsp;as&nbsp;a&nbsp;table&nbsp;on&nbsp;the&nbsp;page</tt></dd></dl>
+ <dl><dt><a name="-needhelp"><strong>needhelp</strong></a>(table_number)</dt><dd><tt>Sets&nbsp;the&nbsp;'need_help'&nbsp;flag&nbsp;for&nbsp;a&nbsp;table&nbsp;to&nbsp;'True'&nbsp;if&nbsp;it&nbsp;is&nbsp;'False'.<br>
+&nbsp;<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;table_number&nbsp;(int):&nbsp;The&nbsp;number&nbsp;of&nbsp;the&nbsp;table&nbsp;to&nbsp;set&nbsp;the&nbsp;flag&nbsp;for.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None.</tt></dd></dl>
+ <dl><dt><a name="-orderConfirmed"><strong>orderConfirmed</strong></a>()</dt><dd><tt>Displays&nbsp;a&nbsp;table&nbsp;showing&nbsp;each&nbsp;item&nbsp;in&nbsp;the&nbsp;menu&nbsp;table&nbsp;that&nbsp;can&nbsp;be&nbsp;modified.<br>
+&nbsp;<br>
+Parameters:&nbsp;None<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;rendered&nbsp;HTML&nbsp;template&nbsp;with&nbsp;context&nbsp;variables&nbsp;'menu&nbsp;items'&nbsp;which&nbsp;is&nbsp;to&nbsp;be&nbsp;displayed&nbsp;as&nbsp;a&nbsp;table&nbsp;on&nbsp;the&nbsp;page</tt></dd></dl>
+ <dl><dt><a name="-removehelpstatus"><strong>removehelpstatus</strong></a>(table_number)</dt><dd><tt>Handles&nbsp;a&nbsp;POST&nbsp;request&nbsp;to&nbsp;remove&nbsp;the&nbsp;"need_help"&nbsp;status&nbsp;for&nbsp;a&nbsp;given&nbsp;table&nbsp;number.<br>
+&nbsp;<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;table_number&nbsp;(str):&nbsp;The&nbsp;number&nbsp;of&nbsp;the&nbsp;table&nbsp;for&nbsp;which&nbsp;to&nbsp;remove&nbsp;the&nbsp;"need_help"&nbsp;status.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;<a href="#-waiter">waiter</a>()&nbsp;function&nbsp;is&nbsp;called&nbsp;to&nbsp;redirect&nbsp;the&nbsp;user&nbsp;to&nbsp;the&nbsp;"waiter"&nbsp;page.</tt></dd></dl>
+ <dl><dt><a name="-reset"><strong>reset</strong></a>()</dt><dd><tt>Empties&nbsp;data&nbsp;from&nbsp;the&nbsp;database&nbsp;from&nbsp;the&nbsp;follwing&nbsp;tables:items,orders&nbsp;and&nbsp;tables.<br>
+&nbsp;<br>
+Parameters:None<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;<br>
+Returns:None</tt></dd></dl>
+ <dl><dt><a name="-send_to_kitchen"><strong>send_to_kitchen</strong></a>(order_id)</dt><dd><tt>Route&nbsp;function&nbsp;to&nbsp;send&nbsp;an&nbsp;order&nbsp;back&nbsp;to&nbsp;the&nbsp;kitchen&nbsp;from&nbsp;the&nbsp;waiter&nbsp;page.<br>
+&nbsp;<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;order_id&nbsp;(int):&nbsp;The&nbsp;order&nbsp;ID&nbsp;of&nbsp;the&nbsp;order&nbsp;to&nbsp;be&nbsp;sent&nbsp;to&nbsp;the&nbsp;kitchen.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Redirect:&nbsp;Redirects&nbsp;to&nbsp;the&nbsp;waiter&nbsp;page.</tt></dd></dl>
+ <dl><dt><a name="-staff_login"><strong>staff_login</strong></a>()</dt><dd><tt>Handles&nbsp;HTTP&nbsp;GET&nbsp;and&nbsp;POST&nbsp;requests&nbsp;for&nbsp;`/staff_login`&nbsp;route.<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;request&nbsp;method&nbsp;is&nbsp;POST,&nbsp;it&nbsp;fetches&nbsp;the&nbsp;`username`&nbsp;and&nbsp;`password`&nbsp;from&nbsp;the<br>
+form&nbsp;data,&nbsp;queries&nbsp;the&nbsp;database&nbsp;for&nbsp;a&nbsp;matching&nbsp;user&nbsp;with&nbsp;the&nbsp;given&nbsp;credentials,&nbsp;and<br>
+redirects&nbsp;the&nbsp;user&nbsp;to&nbsp;the&nbsp;appropriate&nbsp;page&nbsp;based&nbsp;on&nbsp;the&nbsp;user's&nbsp;role.&nbsp;If&nbsp;the&nbsp;user's<br>
+credentials&nbsp;don't&nbsp;exist&nbsp;or&nbsp;doesn't&nbsp;match&nbsp;with&nbsp;value&nbsp;in&nbsp;database,&nbsp;an&nbsp;error&nbsp;message&nbsp;is&nbsp;displayed.&nbsp;If&nbsp;the&nbsp;request&nbsp;method&nbsp;is<br>
+GET,&nbsp;it&nbsp;renders&nbsp;the&nbsp;`staffLogin.html`&nbsp;template&nbsp;with&nbsp;an&nbsp;optional&nbsp;`error`&nbsp;message&nbsp;as&nbsp;context.<br>
+&nbsp;<br>
+Parameters:&nbsp;None<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;the&nbsp;request&nbsp;method&nbsp;is&nbsp;POST,&nbsp;it&nbsp;redirects&nbsp;to&nbsp;appropriate&nbsp;page&nbsp;based&nbsp;on<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;user's&nbsp;role.&nbsp;If&nbsp;the&nbsp;request&nbsp;method&nbsp;is&nbsp;GET,&nbsp;a&nbsp;rendered&nbsp;HTML&nbsp;template&nbsp;with<br>
+&nbsp;&nbsp;&nbsp;&nbsp;an&nbsp;optional&nbsp;`error`&nbsp;message&nbsp;as&nbsp;context.</tt></dd></dl>
+ <dl><dt><a name="-waiter"><strong>waiter</strong></a>()</dt><dd><tt>Handles&nbsp;HTTP&nbsp;GET&nbsp;request&nbsp;for&nbsp;`/waiter`&nbsp;route.<br>
+&nbsp;<br>
+Retrieves&nbsp;cooked&nbsp;and&nbsp;uncooked&nbsp;orders&nbsp;and&nbsp;tables&nbsp;which&nbsp;need&nbsp;help&nbsp;from&nbsp;the&nbsp;database<br>
+using&nbsp;SQLAlchemy&nbsp;and&nbsp;renders&nbsp;the&nbsp;`waiter.html`&nbsp;page&nbsp;with&nbsp;the&nbsp;data.<br>
+&nbsp;<br>
+Parameters:&nbsp;None<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;rendered&nbsp;HTML&nbsp;template&nbsp;with&nbsp;context&nbsp;variables&nbsp;`cooked_orders`,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;`uncooked_orders`,&nbsp;and&nbsp;`tables`.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>app</strong> = &lt;Flask 'database'&gt;<br>
+<strong>request</strong> = &lt;LocalProxy unbound&gt;<br>
+<strong>restaurant_db</strong> = &lt;SQLAlchemy&gt;<br>
+<strong>session</strong> = &lt;LocalProxy unbound&gt;</td></tr></table>
+</body></html>
